@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		ECB635412B06E76600AB4D72 /* HButtonSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB635402B06E76600AB4D72 /* HButtonSampleApp.swift */; };
-		ECB635432B06E76600AB4D72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB635422B06E76600AB4D72 /* ContentView.swift */; };
+		ECB635432B06E76600AB4D72 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB635422B06E76600AB4D72 /* SampleView.swift */; };
 		ECB635452B06E76700AB4D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB635442B06E76700AB4D72 /* Assets.xcassets */; };
 		ECB635482B06E76700AB4D72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB635472B06E76700AB4D72 /* Preview Assets.xcassets */; };
+		ECB635512B06ED6A00AB4D72 /* HButton in Frameworks */ = {isa = PBXBuildFile; productRef = ECB635502B06ED6A00AB4D72 /* HButton */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ECB6353D2B06E76600AB4D72 /* HButtonSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HButtonSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECB635402B06E76600AB4D72 /* HButtonSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButtonSampleApp.swift; sourceTree = "<group>"; };
-		ECB635422B06E76600AB4D72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ECB635422B06E76600AB4D72 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		ECB635442B06E76700AB4D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECB635472B06E76700AB4D72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB635512B06ED6A00AB4D72 /* HButton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				ECB635402B06E76600AB4D72 /* HButtonSampleApp.swift */,
-				ECB635422B06E76600AB4D72 /* ContentView.swift */,
+				ECB635422B06E76600AB4D72 /* SampleView.swift */,
 				ECB635442B06E76700AB4D72 /* Assets.xcassets */,
 				ECB635462B06E76700AB4D72 /* Preview Content */,
 			);
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = HButtonSample;
+			packageProductDependencies = (
+				ECB635502B06ED6A00AB4D72 /* HButton */,
+			);
 			productName = HButtonSample;
 			productReference = ECB6353D2B06E76600AB4D72 /* HButtonSample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = ECB635342B06E76600AB4D72;
+			packageReferences = (
+				ECB6354F2B06ED6A00AB4D72 /* XCRemoteSwiftPackageReference "HButton" */,
+			);
 			productRefGroup = ECB6353E2B06E76600AB4D72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB635432B06E76600AB4D72 /* ContentView.swift in Sources */,
+				ECB635432B06E76600AB4D72 /* SampleView.swift in Sources */,
 				ECB635412B06E76600AB4D72 /* HButtonSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,13 +288,18 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bharris.HButtonSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,13 +322,18 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bharris.HButtonSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECB6354F2B06ED6A00AB4D72 /* XCRemoteSwiftPackageReference "HButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/brayden4012/HButton.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECB635502B06ED6A00AB4D72 /* HButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB6354F2B06ED6A00AB4D72 /* XCRemoteSwiftPackageReference "HButton" */;
+			productName = HButton;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECB635352B06E76600AB4D72 /* Project object */;
 }
